@@ -1,0 +1,178 @@
+/* Default */
+body {
+	margin: 0;
+}
+@-webkit-keyframes fade-in {
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
+}
+@-moz-keyframes fade-in {
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.background-image {
+  background: url('http://www.joblee.ca/assets/background.jpg') no-repeat center center fixed;
+  
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+a {
+	text-decoration:none;
+}
+
+/* http://stackoverflow.com/questions/7155702/horizontally-and-vertically-center-div-in-the-middle-of-page-with-header-and-foo */
+#outer {
+    max-width:800px;
+    margin:0 auto;/* header plus footer height -128px */
+    height:100%;
+    text-align:left;
+    clear:both;
+    display:table;
+    position:relative;
+    z-index:1;
+}
+#content {
+    vertical-align:middle;
+    display:table-cell;
+    padding:0;
+}
+
+/* rules for ie6 */
+* html #outer {
+    height:100%;
+}
+* html #content {
+    top:50%;
+    position:relative;
+    width:100%;
+    float:left;
+}
+* html .inner {
+    top:-50%;
+    position:relative;
+}
+
+/* rules for ie7 */
+*+html #outer {
+    height:auto;
+    min-height:100%;
+}
+*+html #content {
+    top:50%;
+    position:relative;
+    width:100%;
+    float:left;
+}
+*+html .inner {
+    top:-50%;
+    position:relative;
+}
+
+/* SECTION: intro */
+#intro {
+	padding:0 2em 1em;
+	z-index:0;
+	background-color:#4d4d4f;
+	box-shadow:0 0 7.5px #000000;
+}
+#intro h1 {
+	margin:0;
+	margin-bottom:-0.25em;
+	font-family:'Open Sans', sans-serif;
+	font-weight:700;
+	font-size:6em;
+	color:#72cdf6;
+}
+#intro h2 {
+	margin:0;
+	padding-left:0.18em;
+	font-family:'Open Sans', sans-serif;
+	font-weight:300;
+	font-size:2em;
+	color:#ffffff;
+}
+
+/* SECTION: landing */
+#landing div {
+	padding:0.25em 2em;
+	z-index:10;
+	position:relative;
+	font-family:'Open Sans Condensed', sans-serif;
+	font-weight:700;
+	font-size:1.25em;
+	color:#4d4d4f;
+	text-align:center;
+	background-color:#72cdf6;
+	box-shadow:0 0 7.5px #000000;
+}
+
+/* SECTION: pagebanner */
+#pagebanner {
+	z-index:0;
+}
+#pagebanner div {
+	transition:all 0.5s;
+	padding:1em 2.4em;
+	z-index:0;
+	position:relative;
+	box-shadow:0 0 10px #000000 inset, 0 0 0px #000000;
+	background-size:cover;
+	background-repeat:no-repeat;
+	min-height:9em;
+	/* MINIMAL HEIGHT height:2.8em; */
+}
+#pagebanner div:hover, #pagebanner div:active {
+	transition:box-shadow 0.5s;
+	z-index:1;
+	box-shadow:0 0 25px #ffffff inset, 0 0 30px #000000;
+}
+#pagebanner h1 {
+	margin:0;
+	font-family:'Open Sans Condensed', sans-serif;
+	font-weight:700;
+	font-size:2em;
+	color:#ffffff;
+	text-align:center;
+}
+#pagebanner p {
+	display:block;
+	opacity:1;
+	font-family:'Open Sans', sans-serif;
+	font-weight:400;
+	font-size:1em;
+	color:#ffffff;
+}
+/*// pagebanner Custom Backgrounds */
+#pagebanner #bannerMIT {
+	background:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url('http://www.joblee.ca/assets/mitgrouppic.jpg') #72f69b;
+	background-size:cover;
+	background-repeat:no-repeat;
+	background-position:center 35%;
+}
+#pagebanner #bannerTS {
+	background:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url('https://placeimg.com/531/77/tech') #f69b72;
+	background-size:cover;
+	background-repeat:no-repeat;
+	background-position:center center;
+}
+
+/* SECTION: copyright */
+#photocredits {
+	float:right;
+	position:relative;
+	font-family:'Open Sans', sans-serif;
+	font-weight:300;
+	font-size:0.75em;
+	color:#ffffff;
+	background-color:rgba(0,0,0,0.5);
+}
